@@ -8,6 +8,7 @@ body{
     text-align: center;
     font-family: 'Raleway', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: #6879a4;
+    color: white;
 
     display: flex;
     flex-direction: column;
@@ -23,6 +24,10 @@ body{
 
 #timer{
     font-size: 200%;
+}
+
+#registration{
+    font-size: 150%;
 }
 
 footer{
