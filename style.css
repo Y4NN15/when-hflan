@@ -1,0 +1,31 @@
+html, body{
+    height: 100%;
+}
+
+body{
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+    font-family: 'Raleway', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: gray;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#content{
+    flex: 1 0 auto;
+}
+
+#logo{
+    max-width: 250px;
+}
+
+#timer{
+    font-size: 200%;
+}
+
+footer{
+    font-size: 80%;
+    flex-shrink: 0;
+}

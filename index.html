@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet"> 
+    <link rel="icon" type="image/png" href="images/logo_hflan_smash.png" />
+    <title>When is the next HFLAN?</title>
+  </head>
+  <body>
+
+    <div id="content">
+
+        <h1>When is HFLAN 2020?</h1>
+
+        <img id="logo" src="images/logo_hflan_smash.png" alt="HFLAN logo" />
+
+        <p id="timer">HFLAN 2020 is in<br /><br />
+            <span id="timer-days"></span><br />
+            <span id="timer-hours"></span><br />
+            <span id="timer-mins"></span><br />
+            <span id="timer-secs"></span>
+        </p>
+
+        <p>Timezone : CET</p>
+
+        <div id="date-city">28th & 29th of March 2020 in Noisy-le-Grand, France.</div>
+        <div id="registration">Register here : <a href="https://smash.gg/tournament/hflan-melee-edition-2020" target="_blank">Smash.GG</a></div>
+
+    </div>
+  
+    <footer>Made with ❤ by <a href="https://www.twitter.com/VeKoros" target="_blank">VeK</a>.</footer>
+
+</body>
+</html>
+
+<script type="text/javascript">
+    var endDate = new Date("Mar 28, 2020 09:00:00").getTime();
+
+    var timer = setInterval(function() {
+
+        let now = new Date().getTime();
+        let t = endDate - now;
+        
+        if (t >= 0) {
+        
+            let days = Math.floor(t / (1000 * 60 * 60 * 24));
+            let hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            let mins = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+            let secs = Math.floor((t % (1000 * 60)) / 1000);
+        
+            document.getElementById("timer-days").innerHTML = days +
+            "<span class='label'> day(s)</span>";
+        
+            document.getElementById("timer-hours").innerHTML = ("0"+hours).slice(-2) +
+            "<span class='label'> hour(s)</span>";
+        
+            document.getElementById("timer-mins").innerHTML = ("0"+mins).slice(-2) +
+            "<span class='label'> min(s)</span>";
+        
+            document.getElementById("timer-secs").innerHTML = ("0"+secs).slice(-2) +
+            "<span class='label'> sec(s)</span>";
+        
+        } else {
+
+            document.getElementById("timer").innerHTML = "HFLAN is currently happening people!!";
+        
+        }
+    
+    }, 1000);
+  </script>
